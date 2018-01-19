@@ -97,24 +97,3 @@ def conv_block(inputs, filters, alpha, name,kernel=(3, 3), strides=(1, 1)):
                name=name)(inputs)
     x = BatchNormalization(axis=channel_axis, epsilon=1e-5,momentum=0.9,name=name+'_bn')(x)
     return Activation(relu6, name=name+'_relu')(x)
-
-
-if __name__ == '__main__':
-    '''
-    model = MobileNetV2((224,224,3), 1000, 0)
-    model.summary()
-
-    '''
-    run_meta = tf.RunMetadata()
-    with tf.Session(graph=tf.Graph()) as sess:
-        K.set_session(sess)
-
-        net = MobileNetV2((224,224,3), 1000, 0, input_tensor=tf.placeholder('float32', shape=(1, 224, 224, 3)))
-        net.summary()
-        opts = tf.profiler.ProfileOptionBuilder.float_operation()
-        flops = tf.profiler.profile(sess.graph, run_meta=run_meta, cmd='op', options=opts)
-
-        opts = tf.profiler.ProfileOptionBuilder.trainable_variables_parameter()
-        params = tf.profiler.profile(sess.graph, run_meta=run_meta, cmd='op', options=opts)
-
-        print("{:,} --- {:,}".format(flops.total_float_ops, params.total_parameters))
