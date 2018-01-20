@@ -1,4 +1,4 @@
-# MobileNet_V2_Keras
+# MobileNet V2 using Keras
 
 This is the beta implementation of Mobilenet V2(https://128.84.21.199/pdf/1801.04381.pdf) using Keras.
 
