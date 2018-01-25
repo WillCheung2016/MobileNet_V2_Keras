@@ -96,4 +96,4 @@ def conv_block(inputs, filters, alpha, name,kernel=(3, 3), strides=(1, 1)):
                strides=strides,
                name=name)(inputs)
     x = BatchNormalization(axis=channel_axis, epsilon=1e-5,momentum=0.9,name=name+'_bn')(x)
-    return Activation(relu6, name=name+'_relu')(x)
+    return Relu6(x, name=name+'_relu')
