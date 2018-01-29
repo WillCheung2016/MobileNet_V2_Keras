@@ -6,7 +6,7 @@ MobileNet v2 is the next version of MobileNet v1 with big improvement. Instead o
 using depthwise convolution + 1x1 convolution structure, it implements inverted residual block structure by
 first expanding input data into a larger dimension and then applying 3x3 depthwise convolution plus 1x1 convolution
 bottlenet structure to decrease dimension. Based on the experiments in the paper and my personal experience, this
-structure does help gradients pass through the deep network which leverage the gradient vanishing problem.
+structure does help gradients pass through the deep network, which leverage the gradient vanishing problem.
 
 Currently modification needed if you want to use the script for images with small sizes like CIFAR10 or MNIST.
 ImageNet pretrained weights will be released as soon as it is available.
