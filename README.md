@@ -11,17 +11,6 @@ MobileNet v2 is the next version of MobileNet v1 with big improvement. Instead o
 
 Currently modification needed if you want to use the script for images with small sizes like CIFAR10 or MNIST. ImageNet pretrained weights will be released as soon as it is available.
 
-The following table describes the size and accuracy of different light-weight networks on size 224 x 224:
------------------------------------------------------------------------------
-Network                  |   Top 1 acc   |  Multiply-Adds (M) |  Params (M) |
------------------------------------------------------------------------------
-|   MobileNetV1          |    70.6 %     |        575         |     4.2     |
-|   ShuffleNet (1.5)     |    69.0 %     |        292         |     2.9     |
-|   ShuffleNet (x2)      |    70.9 %     |        524         |     4.4     |
-|   NasNet-A             |    74.0 %     |        564         |     5.3     |
-|   MobileNetV2          |    71.7 %     |        300         |     3.4     |
------------------------------------------------------------------------------
-
 # Reference
 - [Inverted Residuals and Linear Bottlenecks: Mobile Networks for Classification, Detection and Segmentation]
 (https://arxiv.org/pdf/1801.04381.pdf))
