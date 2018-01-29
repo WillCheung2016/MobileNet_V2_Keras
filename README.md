@@ -1,6 +1,7 @@
 # MobileNet V2 using Keras
 
 Author: Shengdong Zhang
+
 Email: sza75@sfu.ca
 
 This is the beta implementation of Mobilenet V2(https://128.84.21.199/pdf/1801.04381.pdf) using Keras.
