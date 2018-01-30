@@ -11,7 +11,7 @@ structure does help gradients pass through the deep network, which leverage the 
 Currently modification needed if you want to use the script for images with small sizes like CIFAR10 or MNIST.
 ImageNet pretrained weights will be released as soon as it is available.
 
-The following table describes the size and accuracy of different light-weight networks on size 224 x 224:
+The following table describes the size and accuracy of different light-weight networks on size 224 x 224 for ImageNet dataset:
 -----------------------------------------------------------------------------
 Network                  |   Top 1 acc   |  Multiply-Adds (M) |  Params (M) |
 -----------------------------------------------------------------------------
