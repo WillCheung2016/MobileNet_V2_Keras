@@ -144,8 +144,6 @@ def MobileNetV2(input_shape, classes, weight_decay, feat_dropout=0., input_tenso
     x = InvertedResidualBlock(x, expand=6, out_channels=320, repeats=1, stride=1, weight_decay=weight_decay, block_id=7)
     x = conv_block(x, 1280, weight_decay=weight_decay, name='conv2', kernel=(1, 1), strides=1)
     x = GlobalAveragePooling2D()(x)
-    # x = AveragePooling2D((7, 7))(x)
-    # x = Flatten()(x)
     if feat_dropout!=0.:
         x = Dropout(feat_dropout, name='dropout')(x)
     x = Dense(classes, kernel_regularizer=l2(weight_decay), name='fc_pred')(x)
